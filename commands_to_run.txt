@@ -1,0 +1,33 @@
+TERRAFORM OUTPUT
+terraform output -state=./primary/gke/terraform.tfstate
+terraform output -state=./remote/eks/terraform.tfstate
+
+TERRAFORM VARS
+cat ./primary/gke/terraform.tfvars
+cat ./remote/eks/terraform.tfvars
+
+FEDERATED REGISTRY:
+elastic/logstash*
+
+
+USE CASE 1:
+CVE-2021-44228
+
+k run logstash --image elastic/logstash:6.0.0
+
+
+USE CASE 2:
+k create ns demo2
+
+k run susecon24-demo2 --image=nginx --namespace=demo2
+
+
+USE CASE 3:
+k run curl --image=rancher/curlimages-curl:7.73.0 --command -- sleep 90d
+
+k exec -it curl -- curl -k https://open-docs.neuvector.com/ -s -o /dev/null
+
+k exec -it curl -- curl http://open-docs.neuvector.com/ -s -o /dev/null
+
+
+fed.containers to external -> PROTOCOL HTTP
