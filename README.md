@@ -1,6 +1,6 @@
 # [TUTORIAL-1179] Automate NeuVector Federation Across Diverse Cloud Providers - Laboratory steps
 
-[SUSECON24 Session](https://www.suse.com/susecon/sessions/?search=TUTORIAL-1179#/)
+[SUSECON24 Session](https://youtu.be/i0fqobee-tw)
 
 ### CHALLENGE
 
